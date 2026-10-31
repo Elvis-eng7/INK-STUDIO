@@ -1,0 +1,44 @@
+# Environment and secret configuration
+.env
+.env.*
+!.env.example
+
+# Database credentials and private configuration
+email_config.php
+paystack_config.php
+
+# Local database backups
+*.sql
+*.sql.zip
+*.sql.gz
+
+# Temporary and test files
+test_db.php
+test_email.php
+*.log
+*.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE settings
+.vscode/
+.idea/
+
+# Dependencies (if installed through Composer)
+vendor/
+
+# Temporary files
+*.bak
+*.old
+git rm --cached "imagessrcs/BIT 1201 DATABASE SYSTEMS GROUP QUESTIONS SEP DEC 2026 WEDNESDAY 1PM.pdf"s
+git rm --cached hello.php
+git rm --cached verify_payment_backup.php
+# Local test and backup files
+hello.php
+verify_payment_backup.php
+
+# Personal academic documents
+/imagessrcs/*.pdf

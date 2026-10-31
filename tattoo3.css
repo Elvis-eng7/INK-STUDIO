@@ -1,0 +1,1297 @@
+/* =====================================================
+   INK STUDIO — PREMIUM WEBSITE DESIGN
+   Theme: Charcoal / Ivory / Champagne Gold
+===================================================== */
+
+
+/* ================= 1. GLOBAL SETTINGS ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --black: #10110f;
+    --dark: #171916;
+    --dark-soft: #20221e;
+    --cream: #eee9df;
+    --ivory: #f7f4ed;
+    --gold: #c7a477;
+    --gold-light: #dfc29a;
+    --text-light: #f4f0e8;
+    --text-muted: #a9a69e;
+    --text-dark: #24251f;
+    --border-dark: rgba(255,255,255,0.12);
+    --border-light: rgba(30,30,25,0.15);
+
+    --heading-font: 'Cormorant Garamond', Georgia, serif;
+    --body-font: 'DM Sans', Arial, sans-serif;
+
+    --transition: 0.35s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: var(--body-font);
+    background: var(--black);
+    color: var(--text-light);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+::selection {
+    background: var(--gold);
+    color: var(--black);
+}
+
+
+/* ================= 2. HEADER ================= */
+
+.site-header {
+    width: 100%;
+    min-height: 90px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    background: rgba(16,17,15,0.96);
+    border-bottom: 1px solid var(--border-dark);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(15px);
+}
+
+.logo,
+.footer-logo {
+    font-family: var(--body-font);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.logo span,
+.footer-logo span {
+    color: var(--gold);
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.site-header nav a {
+    color: #d0cec7;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.site-header nav a:hover {
+    color: var(--gold-light);
+}
+
+.header-cta {
+    padding: 13px 19px;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    transition: var(--transition);
+}
+
+.header-cta span {
+    margin-left: 8px;
+}
+
+.header-cta:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+
+/* ================= 3. HERO SECTION ================= */
+
+.hero-section {
+    min-height: 620px;
+    padding: 35px 9% 65px;
+
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+
+    background:
+        radial-gradient(
+            circle at 85% 45%,
+            rgba(199,164,119,0.09),
+            transparent 35%
+        ),
+        var(--black);
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.eyebrow span {
+    width: 30px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.hero-content h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(65px, 7.5vw, 108px);
+    font-weight: 500;
+    line-height: 0.91;
+    letter-spacing: -3px;
+    color: var(--ivory);
+}
+
+.hero-content h1 span {
+    color: var(--gold-light);
+    font-style: italic;
+}
+
+.hero-text {
+    max-width: 440px;
+    margin-top: 32px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 38px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 17px 23px;
+
+    background: var(--gold);
+    color: var(--black);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+
+    transition: var(--transition);
+}
+
+.hero-button:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+.hero-button span {
+    font-size: 17px;
+}
+
+.gallery-link {
+    color: var(--ivory);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 7px;
+    transition: var(--transition);
+}
+
+.gallery-link:hover {
+    color: var(--gold-light);
+}
+
+.hero-details {
+    display: flex;
+    gap: 42px;
+    margin-top: 75px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-dark);
+}
+
+.hero-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hero-details strong {
+    font-family: var(--heading-font);
+    font-size: 27px;
+    color: var(--gold-light);
+    font-weight: 600;
+}
+
+.hero-details span {
+    color: var(--text-muted);
+    font-size: 10px;
+    letter-spacing: 0.7px;
+}
+
+
+/* ================= 4. HERO IMAGE STACK ================= */
+
+.hero-image {
+    width: 100%;
+    max-width: 510px;
+    position: relative;
+    padding: 10px 15px 45px;
+    justify-self: end;
+}
+
+.image-stack {
+    position: relative;
+    width: 100%;
+    height: 480px;
+}
+
+.stack-image {
+    position: absolute;
+    width: 78%;
+    height: 88%;
+    object-fit: cover;
+    border: 7px solid #292a25;
+    box-shadow: 0 25px 65px rgba(0,0,0,0.45);
+}
+
+.stack-back {
+    opacity: 0.65;
+}
+
+.back-two {
+    top: 0;
+    right: 0;
+    transform: rotate(7deg);
+}
+
+.back-one {
+    top: 12px;
+    left: 10px;
+    transform: rotate(-6deg);
+}
+
+.main-slide {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 83%;
+    height: 90%;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+}
+
+.image-label {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--gold-light);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.image-next {
+    position: absolute;
+    right: 0;
+    bottom: 28px;
+    z-index: 5;
+
+    width: 54px;
+    height: 54px;
+
+    border: none;
+    background: var(--gold);
+    color: var(--black);
+
+    font-size: 27px;
+    transition: var(--transition);
+}
+
+.image-next:hover {
+    background: var(--gold-light);
+    transform: translateX(5px);
+}
+
+.image-indicator {
+    position: absolute;
+    right: 70px;
+    bottom: 44px;
+    color: var(--ivory);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* ================= 5. STUDIO INTRO ================= */
+
+.studio-intro {
+    padding: 100px 15%;
+    text-align: center;
+    background: var(--cream);
+    color: var(--text-dark);
+}
+
+.section-label {
+    color: #99784e;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.studio-intro h2,
+.gallery-heading h2,
+.booking-heading h2,
+.contact-heading h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.05;
+    font-weight: 500;
+    .add-customer-btn {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    padding: 11px 18px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.add-customer-btn:hover {
+    background: #329F7D;
+}
+}
+
+.studio-intro h2 span,
+.gallery-heading h2 span {
+    color: #a47e50;
+    font-style: italic;
+}
+
+.studio-intro > p:last-child {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: #66635c;
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* ================= 6. GALLERY ================= */
+
+.gallery-section {
+    padding: 110px 8%;
+    background: var(--cream);
+    color: var(--text-dark);
+}
+
+.gallery-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 45px;
+    margin-bottom: 55px;
+}
+
+.gallery-heading h2 {
+    color: var(--text-dark);
+}
+
+.gallery-intro {
+    max-width: 390px;
+    color: #69665e;
+    font-size: 13px;
+    line-height: 2;
+    padding-bottom: 5px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 27px;
+}
+
+.tattoo-card {
+    background: var(--ivory);
+    border: 1px solid rgba(30,30,25,0.08);
+    transition: var(--transition);
+}
+
+.tattoo-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 20px 45px rgba(30,30,25,0.12);
+}
+
+.card-image {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+    background: #d7d0c3;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.tattoo-card:hover .card-image img {
+    transform: scale(1.07);
+}
+
+.card-number {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+
+    width: 37px;
+    height: 37px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--gold);
+    color: var(--black);
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.card-content {
+    padding: 27px 25px 30px;
+}
+
+.card-category {
+    color: #a17d50;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.card-content h3 {
+    font-family: var(--heading-font);
+    font-size: 36px;
+    font-weight: 600;
+    margin: 7px 0;
+}
+
+.card-content > p:not(.card-category) {
+    min-height: 70px;
+    color: #77736a;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.card-content a {
+    display: inline-block;
+    margin-top: 20px;
+    padding-bottom: 6px;
+
+    color: #99784e;
+    border-bottom: 1px solid #c7a477;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.card-content a:hover {
+    color: var(--black);
+}
+
+.gallery-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    margin-top: 55px;
+    padding-top: 27px;
+    border-top: 1px solid var(--border-light);
+}
+
+.gallery-footer p {
+    color: #77736a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+.gallery-cta {
+    color: #99784e;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+
+/* ================= 7. BOOKING SECTION ================= */
+
+.booking-section {
+    padding: 110px 8%;
+    background:
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(199,164,119,0.08),
+            transparent 30%
+        ),
+        var(--dark);
+}
+
+.booking-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 65px;
+}
+
+.booking-heading h2 {
+    color: var(--ivory);
+}
+
+.booking-heading h2 span {
+    color: var(--gold-light);
+    font-style: italic;
+}
+
+.booking-heading > p:last-child {
+    margin-top: 20px;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    border: 1px solid var(--border-dark);
+    background: #191b18;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.2);
+}
+
+.booking-side {
+    padding: 65px 45px;
+    background:
+        linear-gradient(
+            rgba(18,19,16,0.88),
+            rgba(18,19,16,0.96)
+        ),
+        var(--dark-soft);
+
+    border-right: 1px solid var(--border-dark);
+}
+
+.booking-number {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.booking-side h3 {
+    margin-top: 35px;
+    font-family: var(--heading-font);
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 1.05;
+    color: var(--ivory);
+}
+
+.booking-side > p:not(.booking-number) {
+    margin-top: 25px;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.booking-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 70px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-dark);
+}
+
+.booking-note span {
+    color: var(--gold);
+    font-size: 20px;
+}
+
+.booking-note p {
+    color: #aaa69d;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.booking-form-container {
+    padding: 55px 50px;
+}
+
+#bookingForm {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-height: 53px;
+    padding: 14px 15px;
+
+    background: #22241f;
+    color: var(--ivory);
+
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 0;
+    outline: none;
+
+    font-size: 12px;
+    transition: var(--transition);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #77776e;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
+    background: #262821;
+    box-shadow: 0 0 0 2px rgba(199,164,119,0.08);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: #22241f;
+    color: var(--ivory);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+    line-height: 1.7;
+}
+
+.phone-field {
+    display: grid;
+    grid-template-columns: 145px 1fr;
+    gap: 10px;
+}
+
+.phone-field select,
+.phone-field input {
+    width: 100%;
+}
+
+.price-display {
+    margin: 0 0 27px;
+    padding: 17px 20px;
+
+    background: rgba(199,164,119,0.09);
+    border-left: 3px solid var(--gold);
+
+    color: var(--gold-light);
+    font-family: var(--heading-font);
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.booking-submit {
+    width: 100%;
+    min-height: 58px;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    border: none;
+    background: var(--gold);
+    color: var(--black);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    transition: var(--transition);
+}
+
+.booking-submit:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+.booking-submit span {
+    font-size: 19px;
+}
+
+.form-disclaimer {
+    margin-top: 18px;
+    color: #88877e;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+
+/* ================= 8. CONTACT SECTION ================= */
+
+.contact-section {
+    padding: 100px 8%;
+    background: var(--cream);
+    color: var(--text-dark);
+}
+
+.contact-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.contact-heading h2 {
+    color: var(--text-dark);
+}
+
+.contact-heading h2 span {
+    color: #a47e50;
+    font-style: italic;
+}
+
+.contact-heading > p:last-child {
+    margin-top: 20px;
+    color: #77736a;
+    font-size: 13px;
+}
+
+.contact-details {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.contact-item {
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.contact-item + .contact-item {
+    border-left: 1px solid var(--border-light);
+}
+
+.contact-item span {
+    display: block;
+    margin-bottom: 12px;
+    color: #a17d50;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.contact-item a {
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.contact-item a:hover {
+    color: #a17d50;
+}
+
+
+/* ================= 9. FOOTER ================= */
+
+.site-footer {
+    padding: 55px 8% 25px;
+    text-align: center;
+    background: var(--black);
+}
+
+.footer-logo {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.site-footer > p {
+    margin-top: 13px;
+    color: var(--text-muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.footer-bottom {
+    margin-top: 45px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-dark);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    color: #88877e;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.footer-bottom a:hover {
+    color: var(--gold-light);
+}
+
+
+/* ================= 10. RESPONSIVE TABLET ================= */
+
+@media (max-width: 1000px) {
+
+    .site-header {
+        padding: 0 4%;
+    }
+
+    .site-header nav {
+        gap: 20px;
+    }
+
+    .hero-section {
+        padding: 80px 6%;
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 75px;
+    }
+
+    .hero-details {
+        gap: 22px;
+    }
+
+    .gallery-section,
+    .booking-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .card-image {
+        height: 280px;
+    }
+
+    .booking-side {
+        padding: 50px 30px;
+    }
+
+    .booking-form-container {
+        padding: 45px 30px;
+    }
+
+}
+
+
+/* ================= 11. RESPONSIVE MOBILE ================= */
+
+@media (max-width: 720px) {
+
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    .site-header {
+        min-height: 75px;
+        padding: 12px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .site-header nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 8px 0 3px;
+        border-top: 1px solid var(--border-dark);
+    }
+
+    .site-header nav a {
+        font-size: 9px;
+        letter-spacing: 0.6px;
+    }
+
+    .header-cta {
+        padding: 10px 11px;
+        font-size: 8px;
+        letter-spacing: 0.6px;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        padding: 75px 7% 70px;
+        gap: 45px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(65px, 15vw, 88px);
+    }
+
+    .hero-text {
+        font-size: 13px;
+    }
+
+    .hero-details {
+        margin-top: 45px;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    .hero-details strong {
+        font-size: 23px;
+    }
+
+    .hero-details span {
+        font-size: 9px;
+    }
+
+    .hero-image {
+        max-width: 440px;
+        justify-self: center;
+        padding: 10px 10px 45px;
+    }
+
+    .image-stack {
+        height: 380px;
+    }
+
+    .image-label {
+        left: 5px;
+        font-size: 8px;
+    }
+
+
+    /* INTRO */
+
+    .studio-intro {
+        padding: 75px 8%;
+    }
+
+    .studio-intro h2,
+    .gallery-heading h2,
+    .booking-heading h2,
+    .contact-heading h2 {
+        font-size: 43px;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-section {
+        padding: 75px 7%;
+    }
+
+    .gallery-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .gallery-intro {
+        font-size: 12px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card-image {
+        height: 350px;
+    }
+
+    .card-content > p:not(.card-category) {
+        min-height: auto;
+    }
+
+    .gallery-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+
+    /* BOOKING */
+
+    .booking-section {
+        padding: 80px 5%;
+    }
+
+    .booking-heading {
+        margin-bottom: 40px;
+    }
+
+    .booking-container {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-side {
+        padding: 40px 30px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-dark);
+    }
+
+    .booking-side h3 {
+        font-size: 43px;
+        margin-top: 20px;
+    }
+
+    .booking-note {
+        margin-top: 35px;
+    }
+
+    .booking-form-container {
+        padding: 35px 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .phone-field {
+        grid-template-columns: 125px 1fr;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 12px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        padding: 75px 7%;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-item + .contact-item {
+        border-left: none;
+        border-top: 1px solid var(--border-light);
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 45px 6% 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+/* ================= 12. SMALL PHONES ================= */
+
+@media (max-width: 380px) {
+
+    .site-header nav a {
+        font-size: 8px;
+    }
+
+    .header-cta {
+        font-size: 7px;
+    }
+
+    .hero-content h1 {
+        font-size: 59px;
+    }
+
+    .hero-details {
+        gap: 12px;
+    }
+
+    .hero-details span {
+        font-size: 8px;
+    }
+
+    .image-stack {
+        height: 320px;
+    }
+
+    .card-image {
+        height: 290px;
+    }
+
+    .phone-field {
+        grid-template-columns: 110px 1fr;
+    }
+
+    .phone-field select,
+    .phone-field input {
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: 10px;
+    }
+
+}
+/* Add Customer Action Card */
+.add-customer-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #2563EB, #1D4ED8);
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #60A5FA;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.22);
+    transition: all 0.3s ease;
+}
+
+.add-customer-btn:hover {
+    background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(37, 99, 235, 0.35);
+}
+
+.plus-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.18);
+    border-radius: 9px;
+    font-size: 25px;
+}
+
+.add-customer-btn strong {
+    display: block;
+    font-size: 13px;
+}
+
+.add-customer-btn small {
+    display: block;
+    margin-top: 4px;
+    font-size: 10px;
+    color: #DBEAFE;
+}
+
+.arrow-icon {
+    font-size: 20px;
+    margin-left: 5px;
+}
